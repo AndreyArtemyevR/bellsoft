@@ -6,7 +6,6 @@ import static java.lang.Thread.sleep;
 public class MyThread implements Runnable {
     private final int ttwMS = 10000;
     private final long stopAtMS = java.lang.System.currentTimeMillis() + ttwMS;
-//    private final long stopAtMS = date.getTime() + ttwMS;
     private final Object sharedA;
     private final Object sharedB;
     private static final Date date;
