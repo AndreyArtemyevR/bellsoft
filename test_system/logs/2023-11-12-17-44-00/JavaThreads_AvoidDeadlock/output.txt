@@ -1,0 +1,9 @@
+next step:  stopSameAppInstances $APP_NAME
+Command output:\nStop existing instances of the 'ThreadsLock' application
+Command status: 0
+next step:  runJavaApplication noLock=True $APP_NAME
+Command output:\nrunning JAVA App: /c/Program\ Files/Java/jdk-20/bin/java -classpath /c/Users/artem/IdeaProjects/ThreadsCheck/out/production/ThreadsCheck ThreadsLock
+Command status: 0
+next step:  checkDeadlockNotHappened $APP_NAME
+Command output:\nChecking app 'ThreadsLock'
+Command status: 0

@@ -1,0 +1,3 @@
+STEP: stopSameAppInstances $APP_NAME
+STEP: runJavaApplication noLock=True $APP_NAME
+STEP: checkDeadlockNotHappened $APP_NAME

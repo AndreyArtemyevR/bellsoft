@@ -1,0 +1,133 @@
+2023-11-12 17:44:13
+Full thread dump Java HotSpot(TM) 64-Bit Server VM (20.0.2+9-78 mixed mode, sharing):
+
+Threads class SMR info:
+_java_thread_list=0x000002297e9c0f30, length=14, elements={
+0x000002293d112500, 0x000002293d119220, 0x000002293d11ae00, 0x000002293d11b9a0,
+0x000002293d11c540, 0x000002293d11cfb0, 0x000002293d11e0b0, 0x000002293d11eb60,
+0x000002297e8f7d30, 0x000002297e9dc8a0, 0x000002297e9e4ac0, 0x000002297e9f69a0,
+0x000002297e9f6ef0, 0x000002291d09c650
+}
+
+"Reference Handler" #8 [10860] daemon prio=10 os_prio=2 cpu=0.00ms elapsed=1.31s tid=0x000002293d112500 nid=10860 waiting on condition  [0x00000043a3eff000]
+   java.lang.Thread.State: RUNNABLE
+	at java.lang.ref.Reference.waitForReferencePendingList(java.base@20.0.2/Native Method)
+	at java.lang.ref.Reference.processPendingReferences(java.base@20.0.2/Reference.java:246)
+	at java.lang.ref.Reference$ReferenceHandler.run(java.base@20.0.2/Reference.java:208)
+
+"Finalizer" #9 [6416] daemon prio=8 os_prio=1 cpu=0.00ms elapsed=1.31s tid=0x000002293d119220 nid=6416 in Object.wait()  [0x00000043a3ffe000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait0(java.base@20.0.2/Native Method)
+	- waiting on <0x0000000714c0b4e8> (a java.lang.ref.NativeReferenceQueue$Lock)
+	at java.lang.Object.wait(java.base@20.0.2/Object.java:366)
+	at java.lang.Object.wait(java.base@20.0.2/Object.java:339)
+	at java.lang.ref.NativeReferenceQueue.await(java.base@20.0.2/NativeReferenceQueue.java:48)
+	at java.lang.ref.ReferenceQueue.remove0(java.base@20.0.2/ReferenceQueue.java:158)
+	at java.lang.ref.NativeReferenceQueue.remove(java.base@20.0.2/NativeReferenceQueue.java:89)
+	- locked <0x0000000714c0b4e8> (a java.lang.ref.NativeReferenceQueue$Lock)
+	at java.lang.ref.Finalizer$FinalizerThread.run(java.base@20.0.2/Finalizer.java:173)
+
+"Signal Dispatcher" #10 [13752] daemon prio=9 os_prio=2 cpu=0.00ms elapsed=1.31s tid=0x000002293d11ae00 nid=13752 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Attach Listener" #11 [16300] daemon prio=5 os_prio=2 cpu=0.00ms elapsed=1.31s tid=0x000002293d11b9a0 nid=16300 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Service Thread" #12 [7148] daemon prio=9 os_prio=0 cpu=0.00ms elapsed=1.31s tid=0x000002293d11c540 nid=7148 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Monitor Deflation Thread" #13 [6660] daemon prio=9 os_prio=0 cpu=0.00ms elapsed=1.31s tid=0x000002293d11cfb0 nid=6660 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"C2 CompilerThread0" #14 [23396] daemon prio=9 os_prio=2 cpu=0.00ms elapsed=1.31s tid=0x000002293d11e0b0 nid=23396 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+   No compile task
+
+"C1 CompilerThread0" #22 [13448] daemon prio=9 os_prio=2 cpu=15.62ms elapsed=1.31s tid=0x000002293d11eb60 nid=13448 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+   No compile task
+
+"C1 CompilerThread1" #23 [7160] daemon prio=9 os_prio=2 cpu=0.00ms elapsed=1.30s tid=0x000002297e8f7d30 nid=7160 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+   No compile task
+
+"Notification Thread" #26 [19564] daemon prio=9 os_prio=0 cpu=0.00ms elapsed=1.30s tid=0x000002297e9dc8a0 nid=19564 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Common-Cleaner" #28 [22040] daemon prio=8 os_prio=1 cpu=0.00ms elapsed=1.30s tid=0x000002297e9e4ac0 nid=22040 waiting on condition  [0x00000043a49fe000]
+   java.lang.Thread.State: TIMED_WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@20.0.2/Native Method)
+	- parking to wait for  <0x0000000714a1ce60> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.parkNanos(java.base@20.0.2/LockSupport.java:269)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@20.0.2/AbstractQueuedSynchronizer.java:1847)
+	at java.lang.ref.ReferenceQueue.await(java.base@20.0.2/ReferenceQueue.java:71)
+	at java.lang.ref.ReferenceQueue.remove0(java.base@20.0.2/ReferenceQueue.java:143)
+	at java.lang.ref.ReferenceQueue.remove(java.base@20.0.2/ReferenceQueue.java:218)
+	at jdk.internal.ref.CleanerImpl.run(java.base@20.0.2/CleanerImpl.java:140)
+	at java.lang.Thread.runWith(java.base@20.0.2/Thread.java:1636)
+	at java.lang.Thread.run(java.base@20.0.2/Thread.java:1623)
+	at jdk.internal.misc.InnocuousThread.run(java.base@20.0.2/InnocuousThread.java:186)
+
+"Thread-0" #29 [3880] prio=5 os_prio=0 cpu=0.00ms elapsed=1.29s tid=0x000002297e9f69a0 nid=3880 waiting for monitor entry  [0x00000043a4aff000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at MyThread.run(MyThread.java:41)
+	- waiting to lock <0x0000000714a5a6f8> (a java.lang.Object)
+	- locked <0x0000000714a5a6e8> (a java.lang.Object)
+	at java.lang.Thread.runWith(java.base@20.0.2/Thread.java:1636)
+	at java.lang.Thread.run(java.base@20.0.2/Thread.java:1623)
+
+"Thread-1" #30 [14432] prio=5 os_prio=0 cpu=0.00ms elapsed=1.29s tid=0x000002297e9f6ef0 nid=14432 waiting for monitor entry  [0x00000043a4bfe000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at MyThread.run(MyThread.java:41)
+	- waiting to lock <0x0000000714a5a6e8> (a java.lang.Object)
+	- locked <0x0000000714a5a6f8> (a java.lang.Object)
+	at java.lang.Thread.runWith(java.base@20.0.2/Thread.java:1636)
+	at java.lang.Thread.run(java.base@20.0.2/Thread.java:1623)
+
+"DestroyJavaVM" #31 [12456] prio=5 os_prio=0 cpu=0.00ms elapsed=1.29s tid=0x000002291d09c650 nid=12456 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"VM Thread" os_prio=2 cpu=0.00ms elapsed=1.31s tid=0x000002293d0f4690 nid=5744 runnable  
+
+"GC Thread#0" os_prio=2 cpu=0.00ms elapsed=1.32s tid=0x000002291d10b850 nid=12728 runnable  
+
+"G1 Main Marker" os_prio=2 cpu=0.00ms elapsed=1.32s tid=0x000002291d11c230 nid=6480 runnable  
+
+"G1 Conc#0" os_prio=2 cpu=0.00ms elapsed=1.32s tid=0x000002291d11ce00 nid=17428 runnable  
+
+"G1 Refine#0" os_prio=2 cpu=0.00ms elapsed=1.32s tid=0x000002293cfb03e0 nid=12764 runnable  
+
+"G1 Service" os_prio=2 cpu=0.00ms elapsed=1.32s tid=0x000002293cfb0b30 nid=5160 runnable  
+
+"VM Periodic Task Thread" os_prio=2 cpu=0.00ms elapsed=1.30s tid=0x000002297e9e1a20 nid=5368 waiting on condition  
+
+JNI global refs: 13, weak refs: 0
+
+
+Found one Java-level deadlock:
+=============================
+"Thread-0":
+  waiting to lock monitor 0x000002297e9e7b00 (object 0x0000000714a5a6f8, a java.lang.Object),
+  which is held by "Thread-1"
+
+"Thread-1":
+  waiting to lock monitor 0x000002297e9e7860 (object 0x0000000714a5a6e8, a java.lang.Object),
+  which is held by "Thread-0"
+
+Java stack information for the threads listed above:
+===================================================
+"Thread-0":
+	at MyThread.run(MyThread.java:41)
+	- waiting to lock <0x0000000714a5a6f8> (a java.lang.Object)
+	- locked <0x0000000714a5a6e8> (a java.lang.Object)
+	at java.lang.Thread.runWith(java.base@20.0.2/Thread.java:1636)
+	at java.lang.Thread.run(java.base@20.0.2/Thread.java:1623)
+"Thread-1":
+	at MyThread.run(MyThread.java:41)
+	- waiting to lock <0x0000000714a5a6e8> (a java.lang.Object)
+	- locked <0x0000000714a5a6f8> (a java.lang.Object)
+	at java.lang.Thread.runWith(java.base@20.0.2/Thread.java:1636)
+	at java.lang.Thread.run(java.base@20.0.2/Thread.java:1623)
+
+Found 1 deadlock.
+

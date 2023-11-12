@@ -1,0 +1,10 @@
+# Install Java and configure JAVA_HOME variable to make it able to work with Java applications.
+JAVA_HOME="/c/Program\ Files/Java/jdk-20/bin"
+# Specify log folder to store executed tests data.
+LOGS="./logs"
+# Specify folder with projects used by tests
+PATH_TO_PROJECT="/c/Users/artem/IdeaProjects"
+# Do not change unless you want to change the output color.
+GREEN='\033[0;32m'
+RED='\033[0;31m'
+NC='\033[0m' # No Color
