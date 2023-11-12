@@ -1,0 +1,3 @@
+CLASSPATH="ThreadsCheck/out/production/ThreadsCheck"
+APP_NAME=ThreadsLock
+PATH_TO_PROJECT="/c/Users/artem/IdeaProjects"
